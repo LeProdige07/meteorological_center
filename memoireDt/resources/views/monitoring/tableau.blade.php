@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="my-auto mx-auto container">
+    <div class="my-auto mx-auto">
         <div class="row justify-content-center">
             <div class="col-md-10 my-2">
                 <div class="">
@@ -15,7 +15,7 @@
             </div>
             {{-- <br> --}}
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mx-3">
 
             <table class="table table-secondary">
                 <thead>
@@ -45,7 +45,7 @@
                             <th>{{$monitoring->luminosite}}</th>
                             <th>{{$monitoring->detection_pluie}}</th>
                             <th>{{$monitoring->precipitation}}</th>
-                            <th>{{$monitoring->vitesse_vent}} Km/s</th>
+                            <th>{{$monitoring->vitesse_vent}} Km/h</th>
                             <th>{{$monitoring->direction_vent}}</th>
                             <th>{{$monitoring->qualite_air}} ppm, Bonne</th>
                             <th>{{$monitoring->temperature_ressentie}} °C</th>
