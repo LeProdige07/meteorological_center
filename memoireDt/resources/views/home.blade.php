@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center"><br><br>
             <div class="col-md-10 my-2">
-                <div class="card">
-                    <div class="card-header text-center">{{ __('Home') }}</div>
+                <div>
+                    <div class="card-header display-6">{{ __('Home') }}</div><hr><br>
 
                     <div class="card-body">
                         <div class="container text-center">

@@ -4,18 +4,17 @@
     <div class="my-auto mx-auto container">
         <div class="row justify-content-center">
             <div class="col-md-10 my-2">
-                <div class="card">
-                    <div class="card-header text-center">{{ __('Tableau') }}</div>
-                    <br>
-                    <div class="container text-center">
+                <div class="">
+                    <div class="card-header display-5">{{ __('Tableau') }}</div><hr>
+                    {{-- <br> --}}
+                    {{-- <div class="container text-center">
                         <a href="{{ url('/details/' . $site->id) }}" class="btn btn-primary">Retour </a>
-                    </div>
-                    <br>
+                    </div> --}}
+                    {{-- <br> --}}
                 </div>
             </div>
-            <br>
+            {{-- <br> --}}
         </div>
-        <br>
         <div class="row justify-content-center">
 
             <table class="table table-secondary">
@@ -29,8 +28,10 @@
                         <th scope="col">Detection de pluie</th>
                         <th scope="col">Precipitation</th>
                         <th scope="col">Vitesse du vent</th>
+                        <th scope="col">Direction du vent</th>
                         <th scope="col">Qualité de l'air</th>
                         <th scope="col">Température ressentie</th>
+                        <th scope="col">Pointe de rosée</th>
                         <th scope="col">Date</th>
                     </tr>
                 </thead>
@@ -45,13 +46,18 @@
                             <th>{{$monitoring->detection_pluie}}</th>
                             <th>{{$monitoring->precipitation}}</th>
                             <th>{{$monitoring->vitesse_vent}}</th>
+                            <th>{{$monitoring->direction_vent}}</th>
                             <th>{{$monitoring->qualite_air}}</th>
                             <th>{{$monitoring->temperature_ressentie}}</th>
+                            <th>{{$monitoring->pointe_rosee}}</th>
                             <th>{{$monitoring->created_at}}</th>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
         </div>
+        <div class="container text-center">
+            <a href="{{ url('/details/' . $site->id) }}" class="btn btn-primary display-6">Retour </a>
+        </div><br>
     </div>
 @endsection

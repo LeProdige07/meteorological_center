@@ -4,27 +4,28 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 my-2">
-                <div class="card">
-                    <div class="card-header text-center">{{ __('Monitoring') }} du site : {{ $site->name }}</div>
+                <div class="">
+                    <div class="card-header text-center display-6">{{ __('Monitoring') }} du site : {{ $site->name }}</div>
                     <br>
                     <div class="container text-center">
                         <!-- Bouton flottant à droite avec fond bleu -->
-                        <a href="{{ url('/graphiques/' . $site->id) }}" class="btn btn-primary">Graphiques </a>
+                        <a href="{{ url('/graphiques/' . $site->id) }}" class="btn btn-primary">Graphiques &#128185</a>
 
-                        <a href="{{ url('/') }}" class="btn btn-primary">Retour </a>
+                        <a href="{{ url('/') }}" class="btn btn-primary">Retour &#128281</a>
 
-                        <a href="{{ url('/tableau/' . $site->id) }}" class="btn btn-primary">Tableau </a>
-                    </div>
+                        <a href="{{ url('/tableau/' . $site->id) }}" class="btn btn-primary">Tableau &#127998</a>
+                    </div><hr>
+                    
                     <br>
                 </div>
             </div>
             <br>
             <br>
             @if (!$monitorings)
-                <div class="col-md-3 my-2">
+                <div class="col-md-6 my-2">
                     <div class="card">
                         <div class="card-body">
-                            <p>Pas de données disponible pour ce site</p>
+                            <p class="h3">Pas de données disponible pour ce site</p>
                         </div>
                     </div>
                 </div>
