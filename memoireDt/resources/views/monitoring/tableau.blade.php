@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10 my-2">
                 <div class="">
-                    <div class="card-header display-5">{{ __('Tableau') }}</div><hr>
+                    <div class="card-header text-center display-5">{{ __('TABLEAU') }}</div><hr>
                     {{-- <br> --}}
                     {{-- <div class="container text-center">
                         <a href="{{ url('/details/' . $site->id) }}" class="btn btn-primary">Retour </a>
@@ -47,7 +47,7 @@
                             <th>{{$monitoring->precipitation}}</th>
                             <th>{{$monitoring->vitesse_vent}} Km/s</th>
                             <th>{{$monitoring->direction_vent}}</th>
-                            <th>{{$monitoring->qualite_air}}</th>
+                            <th>{{$monitoring->qualite_air}} ppm, Bonne</th>
                             <th>{{$monitoring->temperature_ressentie}} °C</th>
                             <th>{{$monitoring->pointe_rosee}} °C</th>
                             <th>{{$monitoring->created_at}}</th>

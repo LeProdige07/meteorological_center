@@ -10,8 +10,8 @@
         <div class="row justify-content-center">
             <div class="col-md-10 my-2">
                 <div class="">
-                    <div class="card-header text-center display-4 text-success">{{ __('Bienvenue sur notre platforme météorologique !') }}</div><hr>
-                    <p class=" display-6">
+                    <div class="card-header text-center display-4 text-success"><strong>{{ __('Bienvenue sur notre platforme météorologique !') }}</strong></div><hr>
+                    <p class="h3 text-center">
                         Obtenez comme vous voulez, quand vous voulez les données météorologiques de votre region.
                     </p>
                 </div>

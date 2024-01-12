@@ -15,7 +15,7 @@
 
                         <a href="{{ url('/tableau/' . $site->id) }}" class="btn btn-primary">Tableau &#127998</a>
                     </div><hr>
-                    
+
                     <br>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                         <div class="card-header bg-success text-center">{{ __('Température') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->temperature }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->temperature }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="M15 13V5a3 3 0 0 0-6 0v8a5 5 0 1 0 6 0m-3-9a1 1 0 0 1 1 1v3h-2V5a1 1 0 0 1 1-1" />
@@ -49,7 +49,7 @@
                         <div class="card-header bg-success text-center">{{ __('Humidité') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->humidite }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->humidite }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="M14.5 18q.625 0 1.063-.437T16 16.5q0-.625-.437-1.062T14.5 15q-.625 0-1.062.438T13 16.5q0 .625.438 1.063T14.5 18m-5.75-.75q.3.3.7.3t.7-.3l5.1-5.1q.3-.3.3-.7t-.3-.7q-.3-.3-.712-.3t-.713.3L8.75 15.825q-.3.3-.3.713t.3.712M9.5 13q.625 0 1.063-.437T11 11.5q0-.625-.437-1.062T9.5 10q-.625 0-1.062.438T8 11.5q0 .625.438 1.063T9.5 13m2.5 9q-3.425 0-5.712-2.35T4 13.8q0-1.55.7-3.1t1.75-2.975Q7.5 6.3 8.725 5.05T11 2.875q.2-.2.463-.287T12 2.5q.275 0 .538.088t.462.287q1.05.925 2.275 2.175t2.275 2.675Q18.6 9.15 19.3 10.7t.7 3.1q0 3.5-2.287 5.85T12 22m0-2q2.6 0 4.3-1.763T18 13.8q0-1.825-1.513-4.125T12 4.65Q9.025 7.375 7.513 9.675T6 13.8q0 2.675 1.7 4.438T12 20m0-8" />
@@ -63,7 +63,7 @@
                         <div class="card-header bg-success text-center">{{ __('Pression Atmosphérique') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->pression_atm }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->pression_atm }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                                     <g fill="none" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" d="M20.693 17.33a9 9 0 1 0-17.386 0" />
@@ -83,7 +83,7 @@
                         <div class="card-header bg-success text-center">{{ __('Luminosité') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->luminosite }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->luminosite }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                     <g fill="none">
                                         <path fill="#2F88FF" stroke="#000" stroke-linejoin="round" stroke-width="4"
@@ -118,7 +118,7 @@
                         <div class="card-header bg-success text-center">{{ __('Détection de pluie') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->detection_pluie }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->detection_pluie }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32">
                                     <path fill="currentColor"
                                         d="M25.37 7.306a7.252 7.252 0 0 0-7.247-7.08a7.24 7.24 0 0 0-6.208 3.518a4.163 4.163 0 0 0-2.01-.517a4.22 4.22 0 0 0-4.216 4.066a5.987 5.987 0 0 0-4.128 5.686c0 3.31 2.687 6 6 6v-.003h15.874c3.312 0 6-2.688 6-6a5.993 5.993 0 0 0-4.065-5.67m-1.934 9.673H7.56a4.01 4.01 0 0 1-4-4.002c-.002-1.982 1.45-3.618 3.35-3.93a.998.998 0 0 0 .657-.415c.155-.223.212-.497.163-.763a2.284 2.284 0 0 1-.045-.424a2.224 2.224 0 0 1 2.22-2.218c.647 0 1.217.278 1.633.73a.997.997 0 0 0 1.675-.32c.75-1.992 2.662-3.412 4.91-3.41a5.258 5.258 0 0 1 5.252 5.25c0 .16-.01.325-.027.496c-.05.517.305.984.815 1.08c1.86.343 3.274 1.965 3.27 3.922a4.005 4.005 0 0 1-3.997 4.003zM9.03 26.68c0-1.115.02-5.425.02-5.432a1.001 1.001 0 0 0-1.728-.692c-.005.008-1.036 1.098-2.08 2.342a25.656 25.656 0 0 0-1.463 1.896c-.4.648-.754 1.066-.812 1.885a3.037 3.037 0 0 0 3.032 3.034a3.036 3.036 0 0 0 3.03-3.032zm-4.06.045c.092-.35 1.082-1.72 1.994-2.764l.076-.09c-.005 1.125-.01 2.295-.01 2.81c0 .566-.46 1.027-1.03 1.03a1.038 1.038 0 0 1-1.03-.986m11.455-.045c0-1.115.02-5.424.02-5.43a1 1 0 0 0-1.727-.692c-.006.008-1.035 1.094-2.08 2.342a25.344 25.344 0 0 0-1.463 1.894c-.4.65-.753 1.068-.81 1.888a3.031 3.031 0 0 0 6.06-.002m-4.06.047c.092-.35 1.08-1.72 1.993-2.766l.075-.09c-.005 1.124-.01 2.295-.01 2.808a1.035 1.035 0 0 1-1.03 1.03c-.553-.003-1-.44-1.028-.983zm10.906-6.413a.996.996 0 0 0-1.098.24a56.757 56.757 0 0 0-2.08 2.342c-.523.624-1.05 1.284-1.462 1.895c-.402.65-.754 1.067-.812 1.886a3.029 3.029 0 1 0 6.057 0c0-1.114.022-5.424.022-5.43a.999.999 0 0 0-.626-.933zm-1.39 6.364a1.036 1.036 0 0 1-1.032 1.03a1.033 1.033 0 0 1-1.028-.982c.092-.35 1.08-1.72 1.993-2.765c.025-.028.05-.06.074-.088c-.004 1.123-.008 2.292-.008 2.806z" />
@@ -132,7 +132,7 @@
                         <div class="card-header bg-success text-center">{{ __('Precipitation') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->precipitation }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->precipitation }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 32 32">
                                     <path fill="currentColor"
@@ -149,7 +149,7 @@
                         <div class="card-header bg-success text-center">{{ __('Vitesse du vent') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->vitesse_vent }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->vitesse_vent }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 24 24">
                                     <path fill="currentColor"
@@ -167,7 +167,7 @@
                         <div class="card-header bg-success text-center">{{ __('Direction du vent') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->direction_vent }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->direction_vent }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 48 48">
                                     <g fill="none">
@@ -192,7 +192,7 @@
                         <div class="card-header bg-success text-center">{{ __('Qualité de  l air') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->qualite_air }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->qualite_air }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 48 48">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
@@ -220,7 +220,7 @@
                         <div class="card-header bg-success text-center">{{ __('Température ressentie') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->temperature_ressentie }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->temperature_ressentie }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 32 32">
                                     <path fill="currentColor"
@@ -237,7 +237,7 @@
                         <div class="card-header bg-success text-center">{{ __('Pointe de la rosée') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary">{{ $monitorings->pointe_rosee }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->pointe_rosee }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 512 512">
                                     <path fill="currentColor"
