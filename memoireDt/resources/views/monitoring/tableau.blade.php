@@ -7,10 +7,10 @@
                 <div class="">
                     <div class="card-header text-center display-5">{{ __('TABLEAU') }}</div><hr>
                     {{-- <br> --}}
-                    {{-- <div class="container text-center">
+                    <div class="container text-center">
                         <a href="{{ url('/details/' . $site->id) }}" class="btn btn-primary">Retour </a>
-                    </div> --}}
-                    {{-- <br> --}}
+                    </div>
+                    <br>
                 </div>
             </div>
             {{-- <br> --}}
@@ -56,8 +56,8 @@
                 </tbody>
             </table>
         </div>
-        <div class="container text-center">
+        {{-- <div class="container text-center">
             <a href="{{ url('/details/' . $site->id) }}" class="btn btn-primary display-6">Retour </a>
-        </div><br>
+        </div><br> --}}
     </div>
 @endsection
