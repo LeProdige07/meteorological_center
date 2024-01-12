@@ -42,7 +42,7 @@
                             <th>{{$monitoring->temperature}} °C</th>
                             <th>{{$monitoring->humidite}} %</th>
                             <th>{{$monitoring->pression_atm}} hPa</th>
-                            <th>{{$monitoring->luminosite}} %</th>
+                            <th>{{$monitoring->luminosite}}</th>
                             <th>{{$monitoring->detection_pluie}}</th>
                             <th>{{$monitoring->precipitation}}</th>
                             <th>{{$monitoring->vitesse_vent}} Km/s</th>
