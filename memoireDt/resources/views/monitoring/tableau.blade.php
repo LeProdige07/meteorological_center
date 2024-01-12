@@ -24,7 +24,7 @@
                         <th scope="col">Température</th>
                         <th scope="col">Humidité</th>
                         <th scope="col">Pression Atmosphérique</th>
-                        <th scope="col">Luminosité</th>
+                        <th scope="col">Indice UV</th>
                         <th scope="col">Detection de pluie</th>
                         <th scope="col">Precipitation</th>
                         <th scope="col">Vitesse du vent</th>
@@ -39,17 +39,17 @@
                     @foreach ($monitorings as $key => $monitoring)
                         <tr>
                             <th scope="row">{{ $key + 1 }}</th>
-                            <th>{{$monitoring->temperature}}</th>
-                            <th>{{$monitoring->humidite}}</th>
-                            <th>{{$monitoring->pression_atm}}</th>
-                            <th>{{$monitoring->luminosite}}</th>
+                            <th>{{$monitoring->temperature}} °C</th>
+                            <th>{{$monitoring->humidite}} %</th>
+                            <th>{{$monitoring->pression_atm}} hPa</th>
+                            <th>{{$monitoring->luminosite}} %</th>
                             <th>{{$monitoring->detection_pluie}}</th>
                             <th>{{$monitoring->precipitation}}</th>
-                            <th>{{$monitoring->vitesse_vent}}</th>
+                            <th>{{$monitoring->vitesse_vent}} Km/s</th>
                             <th>{{$monitoring->direction_vent}}</th>
                             <th>{{$monitoring->qualite_air}}</th>
-                            <th>{{$monitoring->temperature_ressentie}}</th>
-                            <th>{{$monitoring->pointe_rosee}}</th>
+                            <th>{{$monitoring->temperature_ressentie}} °C</th>
+                            <th>{{$monitoring->pointe_rosee}} °C</th>
                             <th>{{$monitoring->created_at}}</th>
                         </tr>
                     @endforeach
