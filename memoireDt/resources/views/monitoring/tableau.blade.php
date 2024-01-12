@@ -44,7 +44,7 @@
                             <th>{{$monitoring->pression_atm}} hPa</th>
                             <th>{{$monitoring->luminosite}}</th>
                             <th>{{$monitoring->detection_pluie}}</th>
-                            <th>{{$monitoring->precipitation}}</th>
+                            <th>{{$monitoring->precipitation}} mm</th>
                             <th>{{$monitoring->vitesse_vent}} Km/h</th>
                             <th>{{$monitoring->direction_vent}}</th>
                             <th>{{$monitoring->qualite_air}} ppm, Bonne</th>
