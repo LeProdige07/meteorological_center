@@ -35,7 +35,7 @@
                         <div class="card-header bg-success text-center">{{ __('Température') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->temperature }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->temperature }}°C
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="M15 13V5a3 3 0 0 0-6 0v8a5 5 0 1 0 6 0m-3-9a1 1 0 0 1 1 1v3h-2V5a1 1 0 0 1 1-1" />
@@ -49,7 +49,7 @@
                         <div class="card-header bg-success text-center">{{ __('Humidité') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->humidite }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->humidite }}%
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="M14.5 18q.625 0 1.063-.437T16 16.5q0-.625-.437-1.062T14.5 15q-.625 0-1.062.438T13 16.5q0 .625.438 1.063T14.5 18m-5.75-.75q.3.3.7.3t.7-.3l5.1-5.1q.3-.3.3-.7t-.3-.7q-.3-.3-.712-.3t-.713.3L8.75 15.825q-.3.3-.3.713t.3.712M9.5 13q.625 0 1.063-.437T11 11.5q0-.625-.437-1.062T9.5 10q-.625 0-1.062.438T8 11.5q0 .625.438 1.063T9.5 13m2.5 9q-3.425 0-5.712-2.35T4 13.8q0-1.55.7-3.1t1.75-2.975Q7.5 6.3 8.725 5.05T11 2.875q.2-.2.463-.287T12 2.5q.275 0 .538.088t.462.287q1.05.925 2.275 2.175t2.275 2.675Q18.6 9.15 19.3 10.7t.7 3.1q0 3.5-2.287 5.85T12 22m0-2q2.6 0 4.3-1.763T18 13.8q0-1.825-1.513-4.125T12 4.65Q9.025 7.375 7.513 9.675T6 13.8q0 2.675 1.7 4.438T12 20m0-8" />
@@ -63,7 +63,7 @@
                         <div class="card-header bg-success text-center">{{ __('Pression Atmosphérique') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->pression_atm }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->pression_atm }}hPa
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                                     <g fill="none" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" d="M20.693 17.33a9 9 0 1 0-17.386 0" />
@@ -80,10 +80,10 @@
                 </div>
                 <div class="col-md-3 my-2">
                     <div class="card">
-                        <div class="card-header bg-success text-center">{{ __('Luminosité') }}</div>
+                        <div class="card-header bg-success text-center">{{ __('Indice UV') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->luminosite }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->luminosite }}%
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                     <g fill="none">
                                         <path fill="#2F88FF" stroke="#000" stroke-linejoin="round" stroke-width="4"
@@ -132,7 +132,7 @@
                         <div class="card-header bg-success text-center">{{ __('Precipitation') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->precipitation }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->precipitation }}mm
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 32 32">
                                     <path fill="currentColor"
@@ -149,7 +149,7 @@
                         <div class="card-header bg-success text-center">{{ __('Vitesse du vent') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->vitesse_vent }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->vitesse_vent }}Km/h
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 24 24">
                                     <path fill="currentColor"
@@ -220,7 +220,7 @@
                         <div class="card-header bg-success text-center">{{ __('Température ressentie') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->temperature_ressentie }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->temperature_ressentie }}°C
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 32 32">
                                     <path fill="currentColor"
@@ -237,7 +237,7 @@
                         <div class="card-header bg-success text-center">{{ __('Pointe de la rosée') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->pointe_rosee }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->pointe_rosee }}°C
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 512 512">
                                     <path fill="currentColor"
