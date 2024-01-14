@@ -83,7 +83,7 @@
                         <div class="card-header bg-success text-center">{{ __('Indice UV') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->luminosite }}%
+                            <p class="text-center text-secondary h3">{{ $monitorings->luminosite }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                     <g fill="none">
                                         <path fill="#2F88FF" stroke="#000" stroke-linejoin="round" stroke-width="4"
