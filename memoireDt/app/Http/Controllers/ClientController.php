@@ -23,6 +23,17 @@ class ClientController extends Controller
     }
     public function graphiques($id){
         $site = Site::find($id);
+        // $monitorings = Monitoring::where('site_id', $id)
+        // ->orderBy('created_at', 'desc')
+        // ->get();
+
+        // $row = Monitoring::selectRaw('year(created_at) year, monthname(created_at) month, count(*) data')
+        //     ->groupBy('year', 'month')
+        //     ->orderBy('year', 'desc')
+        //     ->pluck('data', 'month');
+
+        // $labels = $row->keys();
+        // $data = $row->values();
 
         return view('monitoring.graphique', compact('site'));
     }
