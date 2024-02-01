@@ -192,7 +192,7 @@
                         <div class="card-header bg-success text-center">{{ __('Qualité de  l air') }}</div>
 
                         <div class="card-body">
-                            <p class="text-center text-secondary h3">{{ $monitorings->qualite_air }}
+                            <p class="text-center text-secondary h3">{{ $monitorings->qualite_air }} ppm: Bonne
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                     viewBox="0 0 48 48">
                                     <path fill="none" stroke="currentColor" stroke-linecap="round"
