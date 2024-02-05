@@ -35,7 +35,6 @@ class MonitoringController extends Controller
             'qualite_air' => 'required|string',
             'temperature_ressentie' => 'required|string',
             'pointe_rosee' => 'required|string',
-            // 'site_id' => 'required',
         ]);
 
         Monitoring::create([
@@ -56,5 +55,6 @@ class MonitoringController extends Controller
         return response([
             'message' => 'Parametres du site enregistré avec succès!'
         ], 200);
+
     }
 }
