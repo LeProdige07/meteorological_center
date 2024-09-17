@@ -185,7 +185,7 @@
 
                         <div class="card-body">
                             <p class="text-center text-secondary h3">
-                                @if ($monitorings->vitesse_vent >= 2700 && $monitorings->vitesse_vent <= 2800)
+                                @if ($monitorings->direction_vent >= 2700 && $monitorings->direction_vent <= 2800)
                                     Nord
                                 @elseif ($monitorings->direction_vent >= 1600 && $monitorings->direction_vent <= 1700)
                                     Nord-Est
