@@ -203,6 +203,7 @@
                                     Ouest
                                 @elseif ($monitorings->direction_vent >= 3100 && $monitorings->direction_vent <= 3200)
                                     Nord-Est
+                                @endif
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                         viewBox="0 0 48 48">
                                         <g fill="none">
