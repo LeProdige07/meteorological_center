@@ -8,11 +8,13 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    public function welcome(){
+    public function welcome()
+    {
         $sites = Site::all();
         return view('welcome', compact('sites'));
     }
-    public function show($id){
+    public function show($id)
+    {
         $site = Site::find($id);
 
         $monitorings = Monitoring::where('site_id', $id)
@@ -21,27 +23,51 @@ class ClientController extends Controller
 
         return view('monitoring.index', compact('site', 'monitorings'));
     }
-    public function graphiques($id){
+    public function graphiques($id)
+    {
         $site = Site::find($id);
         // $monitorings = Monitoring::where('site_id', $id)
         // ->orderBy('created_at', 'desc')
         // ->get();
 
-        // $row = Monitoring::selectRaw('year(created_at) year, monthname(created_at) month, count(*) data')
-        //     ->groupBy('year', 'month')
-        //     ->orderBy('year', 'desc')
-        //     ->pluck('data', 'month');
+        $humidite = Monitoring::selectRaw('created_at, humidite')
+            ->groupBy('created_at', 'humidite')
+            ->orderBy('created_at', 'asc')
+            ->where('logette_id', $id)
+            ->pluck('humidite', 'created_at');
+        $labels = $humidite->keys();
+        $humidite_data = $humidite->values();
 
-        // $labels = $row->keys();
-        // $data = $row->values();
+        $temperature = Monitoring::selectRaw('created_at, temperature')
+            ->groupBy('created_at', 'temperature')
+            ->orderBy('created_at', 'asc')
+            ->where('logette_id', $id)
+            ->pluck('temperature', 'created_at');
+        $temperature_data = $temperature->values();
 
-        return view('monitoring.graphique', compact('site'));
+        $vitesse_vent = Monitoring::selectRaw('created_at, vitesse_vent')
+            ->groupBy('created_at', 'vitesse_vent')
+            ->orderBy('created_at', 'asc')
+            ->where('logette_id', $id)
+            ->pluck('vitesse_vent', 'created_at');
+        $vitesse_vent_data = $vitesse_vent->values();
+
+        $temperature_ressentie = Monitoring::selectRaw('created_at, temperature_ressentie')
+            ->groupBy('created_at', 'temperature_ressentie')
+            ->orderBy('created_at', 'asc')
+            ->where('logette_id', $id)
+            ->pluck('temperature_ressentie', 'created_at');
+        $temperature_ressentie_data = $temperature_ressentie->values();
+
+
+        return view('monitoring.graphique', compact('site', 'temperature_ressentie_data', 'vitesse_vent_data', 'temperature_data', 'humidite_data', 'labels'));
     }
-    public function tableau($id){
+    public function tableau($id)
+    {
         $site = Site::find($id);
         $monitorings = Monitoring::where('site_id', $id)
-        ->orderBy('created_at', 'desc')
-        ->get();
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         return view('monitoring.tableau', compact('site', 'monitorings'));
     }

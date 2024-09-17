@@ -23,31 +23,36 @@
 
                 <canvas id="myChart" style="width:80%;max-width:750px"></canvas>
 
-              <script>
+                <script>
+                    var labels = {{ Js::from($labels) }};
+                    var temperature_data = {{ Js::from($temperature_data) }};
+                    var humidite_data = {{ Js::from($humidite_data) }};
+                    var vitesse_vent_data = {{ Js::from($vitesse_vent_data) }};
+                    var temperature_ressentie_data = {{ Js::from($temperature_ressentie_data) }};
                     const xValues = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-            
+
                     new Chart("myChart", {
                         type: "line",
                         data: {
-                            labels: xValues,
+                            labels: labels,
                             datasets: [{
-                                data: [15, 20, 30, 20, 10, 60, 25, 38, 45, 21],
+                                data: temperature_data,
                                 borderColor: "red",
                                 label: "Temperature",
                                 fill: true
                             }, {
-                                data: [36, 17, 17, 19, 20, 27, 40, 50, 60, 50],
+                                data: humidite_data,
                                 borderColor: "green",
                                 label: "Humidité",
                                 fill: true
                             }, {
-                                data: [30, 70, 20, 50, 60, 40, 20, 10, 20, 10],
+                                data: vitesse_vent_data,
                                 label: "Vitesse du vent",
                                 borderColor: "blue",
                                 fill: true,
                             }, {
-                                data: [30, 50, 20, 30, 65, 20, 20, 15, 25, 35],
-                                label: "Telpérature ressentie",
+                                data: temperature_ressentie_data,
+                                label: "Température ressentie",
                                 borderColor: "yellow",
                                 fill: true,
                             }]
@@ -60,9 +65,9 @@
                     });
                 </script>
 
-                
+
             </div>
-            
+
         </div>
     </div>
 @endsection
@@ -70,7 +75,7 @@
 {{-- <script>
                     const xValues = {{ Js::from($labels) }};
                     var users = {{ Js::from($monitorings) }};
-            
+
                     new Chart("myChart", {
                         type: "line",
                         data: {
