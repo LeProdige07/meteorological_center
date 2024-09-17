@@ -33,7 +33,7 @@ class ClientController extends Controller
         $humidite = Monitoring::selectRaw('created_at, humidite')
             ->groupBy('created_at', 'humidite')
             ->orderBy('created_at', 'asc')
-            ->where('logette_id', $id)
+            ->where('site_id', $id)
             ->pluck('humidite', 'created_at');
         $labels = $humidite->keys();
         $humidite_data = $humidite->values();
@@ -41,21 +41,21 @@ class ClientController extends Controller
         $temperature = Monitoring::selectRaw('created_at, temperature')
             ->groupBy('created_at', 'temperature')
             ->orderBy('created_at', 'asc')
-            ->where('logette_id', $id)
+            ->where('site_id', $id)
             ->pluck('temperature', 'created_at');
         $temperature_data = $temperature->values();
 
         $vitesse_vent = Monitoring::selectRaw('created_at, vitesse_vent')
             ->groupBy('created_at', 'vitesse_vent')
             ->orderBy('created_at', 'asc')
-            ->where('logette_id', $id)
+            ->where('site_id', $id)
             ->pluck('vitesse_vent', 'created_at');
         $vitesse_vent_data = $vitesse_vent->values();
 
         $temperature_ressentie = Monitoring::selectRaw('created_at, temperature_ressentie')
             ->groupBy('created_at', 'temperature_ressentie')
             ->orderBy('created_at', 'asc')
-            ->where('logette_id', $id)
+            ->where('site_id', $id)
             ->pluck('temperature_ressentie', 'created_at');
         $temperature_ressentie_data = $temperature_ressentie->values();
 
